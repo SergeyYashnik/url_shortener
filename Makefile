@@ -25,6 +25,7 @@ composer:
 
 key:
 	docker compose exec backend php artisan key:generate
+	docker compose up -d
 
 migrate:
 	docker compose exec backend php artisan migrate
