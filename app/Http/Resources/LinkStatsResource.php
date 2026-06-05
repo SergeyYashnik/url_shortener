@@ -10,9 +10,13 @@ class LinkStatsResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
+            // Оригинальный URL
             'url' => $this->url,
+            // Код для ссылки
             'code' => $this->code,
+            // Количество переходов
             'clicks' => $this->clicks,
+            // Дата ир время создания
             'created_at' => $this->created_at->toIso8601String(),
         ];
     }

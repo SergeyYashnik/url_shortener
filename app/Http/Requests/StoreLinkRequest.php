@@ -14,6 +14,7 @@ class StoreLinkRequest extends FormRequest
     public function rules(): array
     {
         return [
+            // Ссылка которую нужно сократить
             'url' => ['required', 'string', 'url', 'max:2048'],
         ];
     }
