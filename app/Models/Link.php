@@ -1,0 +1,18 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Link extends Model
+{
+    protected $fillable = [
+        'url',
+        'code',
+        'clicks',
+    ];
+
+    protected $casts = [
+        'clicks' => 'integer',
+    ];
+}
