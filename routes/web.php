@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LinkController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -9,3 +10,5 @@ Route::get('/', function () {
         'version' => '1.0.0'
     ]);
 });
+
+Route::get('/{code}', [LinkController::class, 'redirect']);
